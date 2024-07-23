@@ -12,6 +12,9 @@
 
 ![Workflow](./examples/workflow.png)
 
+### 可能遇到的问题(Problems That You May Have)
+- 如果报错audio不存在或者未定义，请升级comfyui.(If you get the error that audio does not exist or is undefined, upgrade comfyui.)
+
 ### 安装（Install）
 
 1. ...custom_nodes\Comfyui-SadTalker\SadTalker\checkpoints\
