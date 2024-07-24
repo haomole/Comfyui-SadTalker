@@ -26,3 +26,7 @@
    - detection_Resnet50_Final.pth（104MB）
    - GFPGANv1.4.pth（332MB）
    - parsing_parsenet.pth（81.3MB）
+
+### 联系我（Contact Me）
+
+<image src='./examples/qq.jpg' style="width:30%;"></image>
