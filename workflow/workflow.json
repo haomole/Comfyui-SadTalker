@@ -1,48 +1,166 @@
 {
-  "last_node_id": 65,
-  "last_link_id": 47,
+  "last_node_id": 84,
+  "last_link_id": 60,
   "nodes": [
     {
-      "id": 48,
-      "type": "ShowText",
+      "id": 70,
+      "type": "SadTalker",
       "pos": [
-        1325,
-        316
+        915,
+        607
       ],
       "size": {
-        "0": 321.89410400390625,
-        "1": 151.69046020507812
+        "0": 315,
+        "1": 314
       },
       "flags": {},
       "order": 3,
       "mode": 0,
       "inputs": [
         {
-          "name": "text",
-          "type": "STRING",
-          "link": 46,
-          "widget": {
-            "name": "text"
-          },
-          "slot_index": 0,
-          "label": "text"
+          "name": "image",
+          "type": "IMAGE",
+          "link": 55,
+          "label": "image",
+          "slot_index": 0
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 56,
+          "label": "audio",
+          "slot_index": 1
+        },
+        {
+          "name": "refVideo",
+          "type": "VIDEOSTRING",
+          "link": 59,
+          "label": "refVideo",
+          "slot_index": 2
         }
       ],
       "outputs": [
         {
-          "name": "STRING",
+          "name": "video_path",
           "type": "STRING",
-          "links": null,
-          "shape": 6,
-          "label": "STRING"
+          "links": [
+            57
+          ],
+          "shape": 3,
+          "label": "video_path",
+          "slot_index": 0
+        },
+        {
+          "name": "show_video_path",
+          "type": "STRING",
+          "links": [
+            58
+          ],
+          "shape": 3,
+          "label": "show_video_path",
+          "slot_index": 1
         }
       ],
       "properties": {
-        "Node name for S&R": "ShowText"
+        "Node name for S&R": "SadTalker"
       },
       "widgets_values": [
-        "",
-        "D:\\ai\\ComfyUI\\SadTalker\\ComfyUI-aki-v1.3\\custom_nodes\\Comfyui-SadTalker\\SadTalker\\output\\9cb49422-2d47-4d45-b84b-7c0a7ba052f3\\input_image##input_audio_full.mp4"
+        0,
+        "256",
+        "crop",
+        false,
+        2,
+        false,
+        false,
+        10,
+        false,
+        "pose"
+      ]
+    },
+    {
+      "id": 63,
+      "type": "ShowAudio",
+      "pos": [
+        463,
+        689
+      ],
+      "size": [
+        338.8427396154101,
+        82
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            56
+          ],
+          "shape": 3,
+          "label": "AUDIO",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ShowAudio"
+      },
+      "widgets_values": [
+        null,
+        "Audio",
+        {
+          "hidden": false,
+          "paused": false,
+          "params": {}
+        }
+      ]
+    },
+    {
+      "id": 71,
+      "type": "LoadRefVideo",
+      "pos": [
+        465,
+        864
+      ],
+      "size": [
+        340.4727396154101,
+        102
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "links": null,
+          "shape": 3,
+          "label": "video",
+          "slot_index": 0
+        },
+        {
+          "name": "video_path",
+          "type": "VIDEOSTRING",
+          "links": [
+            59
+          ],
+          "shape": 3,
+          "label": "video_path",
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadRefVideo"
+      },
+      "widgets_values": [
+        null,
+        "Video",
+        {
+          "hidden": false,
+          "paused": false,
+          "params": {}
+        }
       ]
     },
     {
@@ -52,19 +170,19 @@
         471,
         293
       ],
-      "size": {
-        "0": 307.00323486328125,
-        "1": 314
-      },
+      "size": [
+        319.9527396154101,
+        249.62489228534412
+      ],
       "flags": {},
-      "order": 0,
+      "order": 2,
       "mode": 0,
       "outputs": [
         {
           "name": "IMAGE",
           "type": "IMAGE",
           "links": [
-            44
+            55
           ],
           "shape": 3,
           "label": "IMAGE"
@@ -81,7 +199,7 @@
         "Node name for S&R": "LoadImage"
       },
       "widgets_values": [
-        "2024-07-22-14-18-12-7393.png",
+        null,
         "image"
       ]
     },
@@ -89,21 +207,21 @@
       "id": 49,
       "type": "ShowVideo",
       "pos": [
-        1319,
-        557
+        1345,
+        698
       ],
       "size": {
-        "0": 320.5232238769531,
-        "1": 271.4533386230469
+        "0": 322.3049621582031,
+        "1": 379.3208923339844
       },
       "flags": {},
-      "order": 4,
+      "order": 5,
       "mode": 0,
       "inputs": [
         {
           "name": "show_video_path",
           "type": "STRING",
-          "link": 47,
+          "link": 58,
           "widget": {
             "name": "show_video_path"
           },
@@ -119,106 +237,47 @@
       ]
     },
     {
-      "id": 63,
-      "type": "ShowAudio",
+      "id": 48,
+      "type": "ShowText",
       "pos": [
-        471,
-        707
-      ],
-      "size": [
-        309.4232177734375,
-        130
-      ],
-      "flags": {},
-      "order": 1,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "AUDIO",
-          "type": "AUDIO",
-          "links": [
-            45
-          ],
-          "shape": 3,
-          "label": "AUDIO",
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "ShowAudio"
-      },
-      "widgets_values": [
-        "test.mp3",
-        "Audio",
-        {
-          "hidden": false,
-          "paused": false,
-          "params": {}
-        }
-      ]
-    },
-    {
-      "id": 65,
-      "type": "SadTalker",
-      "pos": [
-        912,
-        435
+        1335,
+        421
       ],
       "size": {
-        "0": 315,
-        "1": 198
+        "0": 321.89410400390625,
+        "1": 151.69046020507812
       },
       "flags": {},
-      "order": 2,
+      "order": 4,
       "mode": 0,
       "inputs": [
         {
-          "name": "image",
-          "type": "IMAGE",
-          "link": 44,
-          "label": "image",
-          "slot_index": 0
-        },
-        {
-          "name": "audio",
-          "type": "AUDIO",
-          "link": 45,
-          "label": "audio",
-          "slot_index": 1
+          "name": "text",
+          "type": "STRING",
+          "link": 57,
+          "widget": {
+            "name": "text"
+          },
+          "slot_index": 0,
+          "label": "text"
         }
       ],
       "outputs": [
         {
-          "name": "video_path",
+          "name": "STRING",
           "type": "STRING",
-          "links": [
-            46
-          ],
-          "shape": 3,
-          "label": "video_path",
+          "links": null,
+          "shape": 6,
+          "label": "STRING",
           "slot_index": 0
-        },
-        {
-          "name": "show_video_path",
-          "type": "STRING",
-          "links": [
-            47
-          ],
-          "shape": 3,
-          "label": "show_video_path",
-          "slot_index": 1
         }
       ],
       "properties": {
-        "Node name for S&R": "SadTalker"
+        "Node name for S&R": "ShowText"
       },
       "widgets_values": [
-        0,
-        "256",
-        "crop",
-        "false",
-        2,
-        "false"
+        "",
+        "D:\\ai\\ComfyUI\\SadTalker\\ComfyUI-aki-v1.3\\custom_nodes\\Comfyui-SadTalker\\SadTalker\\output\\02725246-832d-4c55-9b73-8c7ab60882ae\\input_image##input_audio.mp4"
       ]
     }
   ],
@@ -240,36 +299,44 @@
       "AUDIO"
     ],
     [
-      44,
+      55,
       9,
       0,
-      65,
+      70,
       0,
       "IMAGE"
     ],
     [
-      45,
+      56,
       63,
       0,
-      65,
+      70,
       1,
       "AUDIO"
     ],
     [
-      46,
-      65,
+      57,
+      70,
       0,
       48,
       0,
       "STRING"
     ],
     [
-      47,
-      65,
+      58,
+      70,
       1,
       49,
       0,
       "STRING"
+    ],
+    [
+      59,
+      71,
+      1,
+      70,
+      2,
+      "VIDEOSTRING"
     ]
   ],
   "groups": [],
@@ -278,8 +345,8 @@
     "ds": {
       "scale": 0.8264462809917354,
       "offset": {
-        "0": -369.0232307567247,
-        "1": -135.12333487806177
+        "0": -270.2181941608645,
+        "1": -191.8396030291458
       }
     }
   },

@@ -74,17 +74,7 @@ class SadTalker:
         pic_path = os.path.join(input_dir, os.path.basename(source_image))
         shutil.move(source_image, input_dir)
 
-        if driven_audio is not None and os.path.isfile(driven_audio):
-            audio_path = os.path.join(input_dir, os.path.basename(driven_audio))
-
-            #### mp3 to wav
-            if ".mp3" in audio_path:
-                mp3_to_wav(driven_audio, audio_path.replace(".mp3", ".wav"), 16000)
-                audio_path = audio_path.replace(".mp3", ".wav")
-            else:
-                shutil.move(driven_audio, input_dir)
-
-        elif use_idle_mode:
+        if use_idle_mode:
             audio_path = os.path.join(
                 input_dir, "idlemode_" + str(length_of_audio) + ".wav"
             )  ## generate audio from this new audio_path
@@ -94,6 +84,15 @@ class SadTalker:
                 duration=1000 * length_of_audio
             )  # duration in milliseconds
             one_sec_segment.export(audio_path, format="wav")
+        elif driven_audio is not None and os.path.isfile(driven_audio):
+            audio_path = os.path.join(input_dir, os.path.basename(driven_audio))
+
+            #### mp3 to wav
+            if ".mp3" in audio_path:
+                mp3_to_wav(driven_audio, audio_path.replace(".mp3", ".wav"), 16000)
+                audio_path = audio_path.replace(".mp3", ".wav")
+            else:
+                shutil.move(driven_audio, input_dir)
         else:
             assert use_ref_video == True and ref_info == "all"
 

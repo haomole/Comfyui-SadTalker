@@ -30,20 +30,6 @@ def save_video_with_watermark(video, audio, save_path, watermark=False, target_f
         temp_video,
     )
     os.system(cmd)
-    # 检查 audio 路径是否包含 idlemode
-    if "idlemode" in audio:
-        # 自定义音频文件路径
-        custom_audio_path = "./custom/audio.wav"
-        merged_audio = os.path.join(
-            output_directory, str(uuid.uuid4()) + "_merged_audio.wav"
-        )
-        # 合并音频
-        merge_cmd = (
-            r'ffmpeg -y -i "%s" -i "%s" -filter_complex "[0:a][1:a]amerge=inputs=2[aout]" -map "[aout]" -ac 2 "%s"'
-            % (audio, custom_audio_path, merged_audio)
-        )
-        os.system(merge_cmd)
-        audio = merged_audio
 
     temp_file = os.path.join(output_directory, str(uuid.uuid4()) + ".mp4")
     cmd = (

@@ -51,15 +51,20 @@ class SadTalkerNode:
                     ["crop", "resize", "full", "extcrop", "extfull"],
                     {"default": "crop"},
                 ),
-                "stillMode": (["true", "false"], {"default": "false"}),
+                "stillMode": ("BOOLEAN", {"default": False}),
                 "batchSizeInGeneration": (
                     "INT",
                     {"default": 2, "min": 0, "max": 10},
                 ),
-                "gfpganAsFaceEnhancer": (
-                    ["true", "false"],
-                    {"default": "false"},
+                "gfpganAsFaceEnhancer": ("BOOLEAN", {"default": False}),
+                "useIdleMode": ("BOOLEAN", {"default": False}),
+                "idleModeTime": ("INT", {"default": 5, "min": 1, "max": 90}),
+                "useRefVideo": ("BOOLEAN", {"default": False}),
+                "refInfo": (
+                    ["pose", "blink", "pose+blink", "all"],
+                    {"default": "pose"},
                 ),
+                "refVideo": ("VIDEOSTRING",),
             }
         }
 
@@ -84,10 +89,12 @@ class SadTalkerNode:
         stillMode,
         batchSizeInGeneration,
         gfpganAsFaceEnhancer,
+        useIdleMode,
+        idleModeTime,
+        useRefVideo,
+        refInfo,
+        refVideo,
     ):
-
-        stillMode = stillMode == "true"
-        gfpganAsFaceEnhancer = gfpganAsFaceEnhancer == "true"
 
         # 生成时间戳目录
         timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
@@ -128,11 +135,11 @@ class SadTalkerNode:
             size=int(faceModelResolution),
             pose_style=poseStyle,
             exp_scale=1.0,
-            use_ref_video=False,
-            ref_video=None,
-            ref_info=None,
-            use_idle_mode=False,
-            length_of_audio=0,
+            use_ref_video=useRefVideo,
+            ref_video=refVideo,
+            ref_info=refInfo,
+            use_idle_mode=useIdleMode,
+            length_of_audio=idleModeTime,
             use_blink=True,
             result_dir=self.output_dir,
         )
