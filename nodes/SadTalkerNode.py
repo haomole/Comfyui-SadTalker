@@ -6,6 +6,7 @@ import numpy as np  # type: ignore
 from PIL import Image  # type: ignore
 import soundfile as sf  # type: ignore
 from datetime import datetime
+import folder_paths  # type: ignore
 
 
 from ..SadTalker.src.Pb import SadTalker
@@ -23,9 +24,7 @@ class SadTalkerNode:
         self.output_dir = os.path.abspath(
             os.path.join(os.path.dirname(__file__), "..", "SadTalker", "output")
         )
-        self.comfy_output_dir = os.path.abspath(
-            os.path.join(os.path.dirname(__file__), "..", "..", "..", "output")
-        )
+        self.comfy_output_dir = folder_paths.get_output_directory()
         self.input_dir = os.path.abspath(
             os.path.join(os.path.dirname(__file__), "..", "SadTalker", "input")
         )

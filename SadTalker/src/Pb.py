@@ -1,5 +1,5 @@
 import torch, uuid  # type: ignore
-import os, sys, shutil
+import os, sys, shutil  # type: ignore
 
 from src.utils.preprocess import CropAndExtract
 from src.test_audio2coeff import Audio2Coeff
@@ -88,7 +88,7 @@ class SadTalker:
             audio_path = os.path.join(
                 input_dir, "idlemode_" + str(length_of_audio) + ".wav"
             )  ## generate audio from this new audio_path
-            from pydub import AudioSegment
+            from pydub import AudioSegment  # type: ignore
 
             one_sec_segment = AudioSegment.silent(
                 duration=1000 * length_of_audio

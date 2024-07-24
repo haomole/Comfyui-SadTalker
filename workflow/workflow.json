@@ -1,175 +1,7 @@
 {
-  "last_node_id": 49,
-  "last_link_id": 35,
+  "last_node_id": 65,
+  "last_link_id": 47,
   "nodes": [
-    {
-      "id": 20,
-      "type": "SadTalker",
-      "pos": [
-        897,
-        380
-      ],
-      "size": {
-        "0": 315,
-        "1": 198
-      },
-      "flags": {},
-      "order": 2,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "link": 21,
-          "label": "image",
-          "slot_index": 0
-        },
-        {
-          "name": "audio",
-          "type": "AUDIO",
-          "link": 22,
-          "label": "audio",
-          "slot_index": 1
-        }
-      ],
-      "outputs": [
-        {
-          "name": "video",
-          "type": "STRING",
-          "links": [
-            29,
-            33
-          ],
-          "shape": 3,
-          "label": "video",
-          "slot_index": 0
-        },
-        {
-          "name": "show_video_path",
-          "type": "STRING",
-          "links": [
-            35
-          ],
-          "shape": 3,
-          "label": "show_video_path",
-          "slot_index": 1
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "SadTalker"
-      },
-      "widgets_values": [
-        0,
-        "256",
-        "full",
-        "true",
-        2,
-        "false"
-      ]
-    },
-    {
-      "id": 10,
-      "type": "LoadAudio",
-      "pos": [
-        492,
-        681
-      ],
-      "size": {
-        "0": 315,
-        "1": 124
-      },
-      "flags": {},
-      "order": 0,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "AUDIO",
-          "type": "AUDIO",
-          "links": null,
-          "shape": 3,
-          "label": "AUDIO"
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "LoadAudio"
-      },
-      "widgets_values": [
-        "test.mp3",
-        null,
-        ""
-      ]
-    },
-    {
-      "id": 49,
-      "type": "ShowVideo",
-      "pos": [
-        1323,
-        567
-      ],
-      "size": {
-        "0": 330.84674072265625,
-        "1": 270.6126403808594
-      },
-      "flags": {},
-      "order": 4,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "show_video_path",
-          "type": "STRING",
-          "link": 35,
-          "widget": {
-            "name": "show_video_path"
-          },
-          "label": "show_video_path"
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "ShowVideo"
-      },
-      "widgets_values": [
-        "",
-        null
-      ]
-    },
-    {
-      "id": 9,
-      "type": "LoadImage",
-      "pos": [
-        493,
-        301
-      ],
-      "size": {
-        "0": 315,
-        "1": 314
-      },
-      "flags": {},
-      "order": 1,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": null,
-          "shape": 3,
-          "label": "IMAGE"
-        },
-        {
-          "name": "MASK",
-          "type": "MASK",
-          "links": null,
-          "shape": 3,
-          "label": "MASK"
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "LoadImage"
-      },
-      "widgets_values": [
-        "example.png",
-        "image"
-      ]
-    },
     {
       "id": 48,
       "type": "ShowText",
@@ -188,7 +20,7 @@
         {
           "name": "text",
           "type": "STRING",
-          "link": 33,
+          "link": 46,
           "widget": {
             "name": "text"
           },
@@ -210,7 +42,183 @@
       },
       "widgets_values": [
         "",
-        "D:\\ai\\ComfyUI\\SadTalker\\ComfyUI-aki-v1.3\\custom_nodes\\Comfyui-SadTalker\\SadTalker\\output\\014f418e-d000-4033-a79b-ecf2310acc89\\input_image##input_audio_full.mp4"
+        "D:\\ai\\ComfyUI\\SadTalker\\ComfyUI-aki-v1.3\\custom_nodes\\Comfyui-SadTalker\\SadTalker\\output\\9cb49422-2d47-4d45-b84b-7c0a7ba052f3\\input_image##input_audio_full.mp4"
+      ]
+    },
+    {
+      "id": 9,
+      "type": "LoadImage",
+      "pos": [
+        471,
+        293
+      ],
+      "size": {
+        "0": 307.00323486328125,
+        "1": 314
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            44
+          ],
+          "shape": 3,
+          "label": "IMAGE"
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3,
+          "label": "MASK"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "2024-07-22-14-18-12-7393.png",
+        "image"
+      ]
+    },
+    {
+      "id": 49,
+      "type": "ShowVideo",
+      "pos": [
+        1319,
+        557
+      ],
+      "size": {
+        "0": 320.5232238769531,
+        "1": 271.4533386230469
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "show_video_path",
+          "type": "STRING",
+          "link": 47,
+          "widget": {
+            "name": "show_video_path"
+          },
+          "label": "show_video_path"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ShowVideo"
+      },
+      "widgets_values": [
+        "",
+        null
+      ]
+    },
+    {
+      "id": 63,
+      "type": "ShowAudio",
+      "pos": [
+        471,
+        707
+      ],
+      "size": [
+        309.4232177734375,
+        130
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            45
+          ],
+          "shape": 3,
+          "label": "AUDIO",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ShowAudio"
+      },
+      "widgets_values": [
+        "test.mp3",
+        "Audio",
+        {
+          "hidden": false,
+          "paused": false,
+          "params": {}
+        }
+      ]
+    },
+    {
+      "id": 65,
+      "type": "SadTalker",
+      "pos": [
+        912,
+        435
+      ],
+      "size": {
+        "0": 315,
+        "1": 198
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 44,
+          "label": "image",
+          "slot_index": 0
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 45,
+          "label": "audio",
+          "slot_index": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "video_path",
+          "type": "STRING",
+          "links": [
+            46
+          ],
+          "shape": 3,
+          "label": "video_path",
+          "slot_index": 0
+        },
+        {
+          "name": "show_video_path",
+          "type": "STRING",
+          "links": [
+            47
+          ],
+          "shape": 3,
+          "label": "show_video_path",
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SadTalker"
+      },
+      "widgets_values": [
+        0,
+        "256",
+        "crop",
+        "false",
+        2,
+        "false"
       ]
     }
   ],
@@ -232,24 +240,32 @@
       "AUDIO"
     ],
     [
-      29,
-      20,
+      44,
+      9,
       0,
-      38,
+      65,
       0,
-      "STRING"
+      "IMAGE"
     ],
     [
-      33,
-      20,
+      45,
+      63,
+      0,
+      65,
+      1,
+      "AUDIO"
+    ],
+    [
+      46,
+      65,
       0,
       48,
       0,
       "STRING"
     ],
     [
-      35,
-      20,
+      47,
+      65,
       1,
       49,
       0,
@@ -260,10 +276,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 1,
+      "scale": 0.8264462809917354,
       "offset": {
-        "0": -294.68573338632564,
-        "1": -142.48273983673903
+        "0": -369.0232307567247,
+        "1": -135.12333487806177
       }
     }
   },

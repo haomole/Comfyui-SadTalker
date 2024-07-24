@@ -6,6 +6,7 @@ sys.path.append(SadTalkerPath)
 
 from .nodes.ShowText import ShowText
 from .nodes.ShowVideo import ShowVideo
+from .nodes.ShowAudio import ShowAudio
 from .nodes.SadTalkerNode import SadTalkerNode
 
 WEB_DIRECTORY = "./web"
@@ -14,12 +15,14 @@ NODE_CLASS_MAPPINGS = {
     "SadTalker": SadTalkerNode,
     "ShowVideo": ShowVideo,
     "ShowText": ShowText,
+    "ShowAudio": ShowAudio,
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
-    "SadTalker": "🦚SadTalker",
-    "ShowVideo": "🎥Show Video",
-    "ShowText": "💬Show Text",
+    "SadTalker": "🦚 SadTalker",
+    "ShowVideo": "🎥 Show Video",
+    "ShowText": "💬 Show Text",
+    "ShowAudio": "🔊 Show Audio",
 }
 
 
