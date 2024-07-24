@@ -12,12 +12,16 @@
 
 ![Workflow](./examples/workflow.png)
 
+### 可能遇到的问题(Problems That You May Have)
+
+- 如果报错 audio 不存在或者未定义，请升级 comfyui.(If you get the error that audio does not exist or is undefined, upgrade comfyui.)
+
 ### 安装（Install）
 
 1. ...custom_nodes\Comfyui-SadTalker\SadTalker\checkpoints\
    - SadTalker_V0.0.2_256.safetensors（691MB）
    - SadTalker_V0.0.2_512.safetensors（691MB）
-2. ...custom_nodes\Comfyui-SadTalker\SadTalker\gfpgan\weights\
+2. ...custom_nodes\Comfyui-SadTalker\SadTalker\gfpgan\weights\ and ...(comfyui root)\gfpgan\weights\
    - alignment_WFLW_4HG.pth（184MB）
    - detection_Resnet50_Final.pth（104MB）
    - GFPGANv1.4.pth（332MB）
