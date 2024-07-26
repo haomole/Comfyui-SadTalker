@@ -64,8 +64,10 @@ class SadTalkerNode:
                     ["pose", "blink", "pose+blink", "all"],
                     {"default": "pose"},
                 ),
+            },
+            "optional": {
                 "refVideo": ("VIDEOSTRING",),
-            }
+            },
         }
 
     RETURN_TYPES = (
@@ -93,7 +95,7 @@ class SadTalkerNode:
         idleModeTime,
         useRefVideo,
         refInfo,
-        refVideo,
+        refVideo=None,
     ):
 
         # 生成时间戳目录
