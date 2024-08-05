@@ -15,6 +15,8 @@
 ### 可能遇到的问题(Problems That You May Have)
 
 - 如果报错 audio 不存在或者未定义，请升级 comfyui.(If you get the error that audio does not exist or is undefined, upgrade comfyui.)
+- 如果 video 显示异常，请刷新浏览器.（Reload your browser if the video displays abnormally.）
+- 如果报错：FileNotFoundError: [Errno 2] No such file or directory: 'F:\\\\ComfyUI-aki-v1.3\\output\\6b5735c4-ef50-4933-a34d-ccbad3b5936d.mp4'，请下载ffmpeg并且将ffmpeg/bin目录加入环境变量中.（If you get an error: FileNotFoundError: [Errno 2] No such file or directory: 'F:\\\\ComfyUI-aki-v1.3\\output\\6b5735c4-ef50-4933-a34d-ccbad3b5936d.mp4', download ffmpeg and add the ffmpeg/bin directory to the environment variable.）
 
 ### 安装（Install）
 
