@@ -1,6 +1,9 @@
 import os
 import folder_paths  # type: ignore
-from moviepy.editor import VideoFileClip  # type: ignore
+try:
+    from moviepy import VideoFileClip  # type: ignore
+except:
+    from moviepy.editor import VideoFileClip
 
 input_path = folder_paths.get_input_directory()
 
